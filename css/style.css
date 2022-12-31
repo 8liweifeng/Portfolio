@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap'); 
+
+
+:root {
+    --hue-1:61;
+    --hue-2:70;
+    --bg-color:hsl(var(--hue-1), 100%, 50%);
+
+    --main-color-1:hsl(var(--hue-1), 100%, 60%);
+    --main-color-dark-1:hsl(var(--hue-1), 100%, 60%);
+    --main-color-2:hsl(var(--hue-2), 70%, 50%);
+    --main-color-dark-2:hsl(var(--hue-2), 80%, 60%);
+
+    --bg-color-1:hsl(var(--hue-1), 100%, 50%);
+    --bg-color-2:white;
+    --bg-color-3:hsl(var(--hue-1), 100%, 52%);
+    --bg-color-transparent:rgba(255,255,255,0.6);
+
+    --heading-color:hsl(var(--hue-1), 15%, 60%);
+    --text-color:hsl(var(--hue-1), 17%, 63%);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+    background-color: hsl(61, 100%, 50%);
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+::selection {
+    background-color: hsla(var(--hue-1), 15%, 60%, 0.9);
+    color: orange;
+}
+
+a {
+    text-decoration:none;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: auto;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    padding: 0 1.5rem;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+nav.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a.logo {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:blue;
+    margin: 1.5rem;
+    height: 120px;
+    line-height: 120px;
+    letter-spacing: 1px;
+}
+
+.link {
+    flex: 1;
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+
+}
+
+.link ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
