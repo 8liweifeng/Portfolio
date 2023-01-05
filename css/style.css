@@ -28,15 +28,17 @@
 
 body {
     overflow: auto;
-    background-color: hsl(61, 100%, 50%);
+    background: white;
     font-family: 'Rubik Bubbles', cursive;
 }
 
 ::selection {
     background-color: hsla(var(--hue-1), 15%, 60%, 0.9);
-    color: orange;
+    
 }
 
+
+/* --------This is for navigation bar --------- */
 a {
     text-decoration:none;
 }
@@ -50,16 +52,22 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: auto;
+    z-index: 11;
+    transition: 0.3s;
+}
+
+header.scrolled {
+    background-color: aliceblue;
+    box-shadow: 0 5px 20px 1px rgb(0, 0, 0, 0.1);
+    opacity: 0.8;
+    backdrop-filter: blur(15px);
 }
 
 .container {
     position: relative;
     width: 100%;
-    max-width: 75rem;
-    padding: 0 1.5rem;
     background-color: aliceblue;
-    margin: 0 auto;
+    margin:auto;
 }
 
 nav.container {
@@ -71,23 +79,93 @@ nav.container {
 a.logo {
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:blue;
+    color:rgb(89, 0, 255);
     margin: 1.5rem;
-    height: 120px;
-    line-height: 120px;
-    letter-spacing: 1px;
+    line-height: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
 }
 
-.link {
+.links {
     flex: 1;
     display: flex;
-    background-color: aqua;
-    justify-content: center;
+    justify-content:center;
 
 }
 
-.link ul {
+.nav-list {
     display: flex;
-    align-items: center;
+    align-items:center;
     width: 100%;
+    font-size: 10px;
 }
+
+.nav-link {
+    position: relative;
+    align-items: center;
+    display: inline-block;
+    margin: 0 1rem 0 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:blueviolet;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 0);
+    bottom: 0;
+    left: -5px;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: brown;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.toggle-btn {
+    position: relative;
+    display: flex;
+    color: black;
+    background-color: rgb(230, 203, 34);
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    filter: brightness(50%);
+    box-shadow: 10px 0 10px 0px rgb(50, 205, 89);
+}
+
+/* --------This is for showcase area style --------- */
+
+
+
+
+
+
+
+
+
+
+
+
