@@ -156,7 +156,23 @@ function changeImage(index) {
 
 }
 
+/* ------------------ testinomial Animation --------------------- */
 
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    //direction: 'vertical',
+    loop: true,
+    speed: 500,
+    autoplay: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    
+    
+
+  });
 
 
 
