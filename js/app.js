@@ -1,4 +1,3 @@
-//alert("Hello!");
 
 const header = document.querySelector("header");
 
@@ -17,7 +16,12 @@ const images = document.querySelectorAll(".image img");
 const prev_btn = document.querySelector(".prev-btn");
 const next_btn = document.querySelector(".next-btn");
 
+const links = document.querySelectorAll(".nav-link");
+
+const toggle_btn = document.querySelector(".toggle-btn");
+
 window.addEventListener("scroll", ()=> {
+    activeLink();
     if (!skillsPlayed) skillsCounter();
     if (!mlPlayed) mlCounter();
 })
@@ -169,10 +173,48 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    
-    
 
   });
+
+/* ------------------ change active link Animation --------------------- */
+
+function activeLink() {
+    let sections = document.querySelectorAll("section[id]");
+    //after adding [id], we could only select sections with id
+    let passedSections = Array.from(sections).map((scr,i) => {
+        return {y:scr.getBoundingClientRect().top - header.offsetHeight,
+            id:i
+        }
+    }).filter((scr)=> scr.y<=0);
+
+    let currSectionID = passedSections.at(-1).id;
+    links.forEach(l => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
+
+}
+
+/* ------------------ change the color of the link --------------------- */
+let firstTheme = localStorage.getItem("dark");
+changeTheme(+firstTheme);
+
+function changeTheme(isDark) {
+    if (isDark) {
+        document.body.classList.add("dark");
+        toggle_btn.classList.replace("uil-moon","uil-sun");
+        localStorage.setItem("dark", 1);
+    } else {
+        document.body.classList.remove("dark");
+        toggle_btn.classList.replace("uil-sun","uil-moon");
+        localStorage.setItem("dark", 0);
+    }
+}
+
+toggle_btn.addEventListener(("click"), ()=> {
+    changeTheme(!document.body.classList.contains("dark"));
+})
+
+
+
 
 
 

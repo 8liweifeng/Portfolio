@@ -20,19 +20,19 @@
             <div class="links">
                 <ul class="nav-list">
                     <li>
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Education</a>
+                        <a href="#about" class="nav-link">Education</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Skills</a>
+                        <a href="#services" class="nav-link">Skills</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Projects</a>
+                        <a href="#portfolio" class="nav-link">Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Volunteer</a>
+                        <a href="#contact" class="nav-link">Volunteer</a>
                     </li>
                     <li>
                         <a href="#" class="nav-link">Contact</a>
@@ -47,8 +47,8 @@
     
 
 
-    <main style="height: 1000px;">
-       <section class="showcase-area">
+    <main>
+       <section class="showcase-area" id="home">
             <div class="container">
                 <div class="showcase-info">
                     <h3 class="sub-heading">Learner</h3>
@@ -84,7 +84,7 @@
             </div>
        </section> 
 
-       <section class="about section">
+       <section class="about section" id="about">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-card">
@@ -196,7 +196,7 @@
             </div>
        </section>
 
-       <section class="service section">
+       <section class="service section" id="services">
         <div class="container">
             <div class="services-info">
                 <h3 class="sub-heading">My services</h1>
@@ -279,7 +279,7 @@
         </div>
        </section>
 
-       <section class="portfolio section">
+       <section class="portfolio section" id="portfolio">
             <div class="modal">
                 <div class="modal-overlay"></div>
                 <div class="slider-wrap">
@@ -490,7 +490,7 @@
             </div>
        </section>
 
-       <section class="contact section">
+       <section class="contact section" id="contact">
             <div class="container">
                 <div class="contact-info">
                     <h3 class="sub-heading">Contact me</h3>
@@ -513,9 +513,55 @@
             </div>
        </section>
 
+       <section class="subscription section">
+            <div class="container">
+                <div class="sub-box">
+                    <div class="sub-info">
+                        <h3 class="sub-heading">Newsletter</h3>
+                        <h1 class="heading">Get news about my projects</h1>
+                        <p class="text">
+                            This si some news about myself. This si some news about myself
+                            This si some news about myself
+                            This si some news about myself
+                        </p>
+                    </div>
+                    <form action="index.html">
+                        <input type="email" placeholder="Email" class="form-input" required>
+                        <input type="submit" value="Subscribe" class="btn" required>
+                    </form>
+                </div>
+            </div>
+       </section>
        <!-- <section style="height: 1000px;"></section> -->
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Portf<span>olio.</span></a>
+            <p class="text">&copy; Copyright 2022. All rights reserved</p>
+            <ul class="social-media">
+                <li>
+                    <a href="#" class="social-link">
+                        <i class="uil uil-facebook"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="social-link">
+                        <i class="uil uil-dribbble"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+
 
     <script src="../node_modules/mixitup/dist/mixitup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
