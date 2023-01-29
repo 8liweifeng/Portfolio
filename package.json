@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "scrollreveal": "^4.0.9",
+    "swiper": "^8.4.6"
+  },
+  "devDependencies": {
+    "mixitup": "^3.3.1"
+  }
+}
