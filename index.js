@@ -1,8 +1,6 @@
 
-
-
-
-const header = document.querySelector("header");
+$(document).ready(function(){ 
+    const header = document.querySelector("header");
 
 const first_skill = document.querySelector(".skill:first-child")
 const sk_counters = document.querySelectorAll(".counter span");
@@ -222,7 +220,7 @@ toggle_btn.addEventListener(("click"), ()=> {
 /* ------------------ open & close navbar menu --------------------- */
 
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
     
     hamburger.addEventListener(("click"), ()=> {
         document.body.classList.toggle("open");
@@ -235,6 +233,10 @@ $( document ).ready(function() {
     }))
     
     
-})
+// })
+
+
+
+ })
 
 
