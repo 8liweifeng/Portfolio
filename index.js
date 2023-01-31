@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-    const header = document.querySelector("header");
+
+
+
+
+const header = document.querySelector("header");
 
 const first_skill = document.querySelector(".skill:first-child")
 const sk_counters = document.querySelectorAll(".counter span");
@@ -218,18 +221,20 @@ toggle_btn.addEventListener(("click"), ()=> {
 
 /* ------------------ open & close navbar menu --------------------- */
 
-hamburger.addEventListener(("click"), ()=> {
-    document.body.classList.toggle("open");
-    document.body.classList.toggle("stopScrolling");
+
+$( document ).ready(function() {
+    
+    hamburger.addEventListener(("click"), ()=> {
+        document.body.classList.toggle("open");
+        document.body.classList.toggle("stopScrolling");
+    })
+    
+    links.forEach(link => link.addEventListener(("click"), ()=> {
+        document.body.classList.remove("open");
+        document.body.classList.remove("stopScrolling");
+    }))
+    
+    
 })
-
-links.forEach(link => link.addEventListener(("click"), ()=> {
-    document.body.classList.remove("open");
-    document.body.classList.remove("stopScrolling");
-}))
-
-
-  });
-
 
 
