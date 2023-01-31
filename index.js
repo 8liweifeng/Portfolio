@@ -1,6 +1,6 @@
 
-$(document).ready(function(){ 
-    const header = document.querySelector("header");
+
+const header = document.querySelector("header");
 
 const first_skill = document.querySelector(".skill:first-child")
 const sk_counters = document.querySelectorAll(".counter span");
@@ -29,6 +29,10 @@ window.addEventListener("scroll", ()=> {
     if (!mlPlayed) mlCounter();
 })
 
+window.addEventListener("click", ()=> {
+    document.body.classList.toggle("open");
+    document.body.classList.toggle("stopScrolling");
+})
 
 function stickyNavbar() {
     
@@ -212,7 +216,7 @@ function changeTheme(isDark) {
     }
 }
 
-toggle_btn.addEventListener(("click"), ()=> {
+toggle_btn.addEventListener("click", ()=> {
     changeTheme(!document.body.classList.contains("dark"));
 })
 
@@ -237,6 +241,6 @@ toggle_btn.addEventListener(("click"), ()=> {
 
 
 
- })
+
 
 
