@@ -29,17 +29,6 @@ window.addEventListener("scroll", ()=> {
     if (!mlPlayed) mlCounter();
 })
 
-window.addEventListener(("click"), ()=> {
-    document.body.classList.toggle("open");
-    document.body.classList.toggle("stopScrolling");
-})
-
-links.forEach(link => link.addEventListener(("click"), ()=> {
-    document.body.classList.remove("open");
-    document.body.classList.remove("stopScrolling");
-}))
-
-
 
 function stickyNavbar() {
     
@@ -233,7 +222,15 @@ toggle_btn.addEventListener(("click"), ()=> {
 
 // $( document ).ready(function() {
     
+    hamburger.addEventListener("click", ()=> {
+        document.body.classList.toggle("open");
+        document.body.classList.toggle("stopScrolling");
+    })
     
+    links.forEach(link => link.addEventListener("click", ()=> {
+        document.body.classList.remove("open");
+        document.body.classList.remove("stopScrolling");
+    }))
     
     
 // })
