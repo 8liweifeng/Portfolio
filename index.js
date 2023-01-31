@@ -1,4 +1,5 @@
-const header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", function(event) { 
+    const header = document.querySelector("header");
 
 const first_skill = document.querySelector(".skill:first-child")
 const sk_counters = document.querySelectorAll(".counter span");
@@ -226,4 +227,9 @@ links.forEach(link => link.addEventListener(("click"), ()=> {
     document.body.classList.remove("open");
     document.body.classList.remove("stopScrolling");
 }))
+
+
+  });
+
+
 
