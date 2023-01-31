@@ -1,4 +1,3 @@
-
 const header = document.querySelector("header");
 
 const first_skill = document.querySelector(".skill:first-child")
@@ -227,9 +226,4 @@ links.forEach(link => link.addEventListener(("click"), ()=> {
     document.body.classList.remove("open");
     document.body.classList.remove("stopScrolling");
 }))
-
-
-
-
-
 
