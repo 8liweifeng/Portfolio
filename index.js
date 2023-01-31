@@ -29,7 +29,7 @@ window.addEventListener("scroll", ()=> {
     if (!mlPlayed) mlCounter();
 })
 
-hamburger.addEventListener(("click"), ()=> {
+window.addEventListener(("click"), ()=> {
     document.body.classList.toggle("open");
     document.body.classList.toggle("stopScrolling");
 })
