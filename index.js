@@ -21,7 +21,7 @@ const links = document.querySelectorAll(".nav-link");
 
 const toggle_btn = document.querySelector(".toggle-btn");
 
-
+const hamburger = document.getElementById("hamburger");
 
 window.addEventListener("scroll", ()=> {
     activeLink();
@@ -222,11 +222,16 @@ toggle_btn.addEventListener("click", ()=> {
 
 
 $( document ).ready(function() {
-    const hamburger = document.getElementById("hamburger");
-    hamburger.addEventListener("click", ()=> {
+    
+    hamburger.onclick = () => {
         document.body.classList.toggle("open");
         document.body.classList.toggle("stopScrolling");
-    })
+    }
+
+    // hamburger.addEventListener("click", ()=> {
+    //     document.body.classList.toggle("open");
+    //     document.body.classList.toggle("stopScrolling");
+    // })
     
     links.forEach(link => link.addEventListener("click", ()=> {
         document.body.classList.remove("open");
