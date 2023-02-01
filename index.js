@@ -222,7 +222,7 @@ toggle_btn.addEventListener("click", ()=> {
 
 
 $( document ).ready(function() {
-    const hamburger = document.querySelector("#hamburger");
+    const hamburger = document.getElementById("hamburger");
     hamburger.addEventListener("click", ()=> {
         document.body.classList.toggle("open");
         document.body.classList.toggle("stopScrolling");
@@ -233,9 +233,9 @@ $( document ).ready(function() {
         document.body.classList.remove("stopScrolling");
     }))
     
-} );
+} )
     
- 
+  
     
     
     
