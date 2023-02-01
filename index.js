@@ -21,7 +21,7 @@ const links = document.querySelectorAll(".nav-link");
 
 const toggle_btn = document.querySelector(".toggle-btn");
 
-const hamburger = document.querySelector(".hamburger");
+
 
 window.addEventListener("scroll", ()=> {
     activeLink();
@@ -221,9 +221,10 @@ toggle_btn.addEventListener("click", ()=> {
 /* ------------------ open & close navbar menu --------------------- */
 
 
-// $( document ).ready(function() {
+ $( document ).ready(function() {
     
-    document.querySelector(".hamburger").addEventListener("click", ()=> {
+    const hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", ()=> {
         document.body.classList.toggle("open");
         document.body.classList.toggle("stopScrolling");
     })
@@ -234,7 +235,7 @@ toggle_btn.addEventListener("click", ()=> {
     }))
     
     
-// })
+ })
 
 
 
