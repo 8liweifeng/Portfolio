@@ -220,6 +220,11 @@ toggle_btn.addEventListener("click", ()=> {
 
 /* ------------------ open & close navbar menu --------------------- */
 
+document.addEventListener("DOMContentLoaded", function(event) { 
+    //here your code
+  });
+
+
 
 $( document ).ready(function() {
     const hamburger = document.querySelector(".hamburger");
