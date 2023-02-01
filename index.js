@@ -21,7 +21,7 @@ const links = document.querySelectorAll(".nav-link");
 
 const toggle_btn = document.querySelector(".toggle-btn");
 
-const hamburger = document.getElementById("hamburger");
+const hamburger = document.querySelector(".hamburger");
 
 window.addEventListener("scroll", ()=> {
     activeLink();
@@ -220,28 +220,30 @@ toggle_btn.addEventListener("click", ()=> {
 
 /* ------------------ open & close navbar menu --------------------- */
 
-
-$( document ).ready(function() {
-    
-    hamburger.onclick = () => {
-        document.body.classList.toggle("open");
-        document.body.classList.toggle("stopScrolling");
-    }
-
-    // hamburger.addEventListener("click", ()=> {
+// hamburger.onclick = () => {
     //     document.body.classList.toggle("open");
     //     document.body.classList.toggle("stopScrolling");
-    // })
-    
+    // }
+
+$( document ).ready(function() {
+
+    hamburger.addEventListener("click", ()=> {
+        document.body.classList.toggle("open");
+        document.body.classList.toggle("stopScrolling");
+    })
+
     links.forEach(link => link.addEventListener("click", ()=> {
         document.body.classList.remove("open");
         document.body.classList.remove("stopScrolling");
-    }))
+    })) 
     
 } )
     
   
-    
+  // links.forEach(link => link.addEventListener("click", ()=> {
+    //     document.body.classList.remove("open");
+    //     document.body.classList.remove("stopScrolling");
+    // }))  
     
     
 
