@@ -225,7 +225,7 @@ toggle_btn.addEventListener("click", ()=> {
     //     document.body.classList.toggle("stopScrolling");
     // }
 
-$( document ).ready(function() {
+
 
     hamburger.addEventListener("click", ()=> {
         document.body.classList.toggle("open");
@@ -237,7 +237,7 @@ $( document ).ready(function() {
         document.body.classList.remove("stopScrolling");
     })) 
     
-} )
+
     
   
   // links.forEach(link => link.addEventListener("click", ()=> {
