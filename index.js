@@ -221,8 +221,7 @@ toggle_btn.addEventListener("click", ()=> {
 /* ------------------ open & close navbar menu --------------------- */
 
 
- $( document ).ready(function() {
-    
+document.addEventListener("DOMContentLoaded", function(event) { 
     const hamburger = document.querySelector(".hamburger");
     hamburger.addEventListener("click", ()=> {
         document.body.classList.toggle("open");
@@ -234,8 +233,11 @@ toggle_btn.addEventListener("click", ()=> {
         document.body.classList.remove("stopScrolling");
     }))
     
+  });
     
- })
+    
+    
+
 
 
 
