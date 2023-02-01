@@ -29,10 +29,7 @@ window.addEventListener("scroll", ()=> {
     if (!mlPlayed) mlCounter();
 })
 
-window.addEventListener("click", ()=> {
-    document.body.classList.toggle("open");
-    document.body.classList.toggle("stopScrolling");
-})
+
 
 function stickyNavbar() {
     
@@ -226,7 +223,7 @@ toggle_btn.addEventListener("click", ()=> {
 
 // $( document ).ready(function() {
     
-    hamburger.addEventListener("click", ()=> {
+    window.addEventListener("click", ()=> {
         document.body.classList.toggle("open");
         document.body.classList.toggle("stopScrolling");
     })
