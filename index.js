@@ -30,7 +30,6 @@ window.addEventListener("scroll", ()=> {
 })
 
 
-
 function stickyNavbar() {
     
     header.classList.toggle("scrolled", window.pageYOffset>0);
@@ -197,6 +196,8 @@ function activeLink() {
 
 }
 
+
+
 /* ------------------ change the color of the link --------------------- */
 let firstTheme = localStorage.getItem("dark");
 changeTheme(+firstTheme);
@@ -213,43 +214,20 @@ function changeTheme(isDark) {
     }
 }
 
-toggle_btn.addEventListener("click", ()=> {
+toggle_btn.addEventListener(("click"), ()=> {
     changeTheme(!document.body.classList.contains("dark"));
 })
 
 
 /* ------------------ open & close navbar menu --------------------- */
 
-// hamburger.onclick = () => {
-    //     document.body.classList.toggle("open");
-    //     document.body.classList.toggle("stopScrolling");
-    // }
+hamburger.addEventListener(("click"), ()=> {
+    document.body.classList.toggle("open");
+    document.body.classList.toggle("stopScrolling");
+})
 
-
-
-    hamburger.addEventListener("click", ()=> {
-        document.body.classList.toggle("open");
-        document.body.classList.toggle("stopScrolling");
-    })
-
-    links.forEach(link => link.addEventListener("click", ()=> {
-        document.body.classList.remove("open");
-        document.body.classList.remove("stopScrolling");
-    })) 
-    
-
-    
-  
-  // links.forEach(link => link.addEventListener("click", ()=> {
-    //     document.body.classList.remove("open");
-    //     document.body.classList.remove("stopScrolling");
-    // }))  
-    
-    
-
-
-
-
-
-
+links.forEach(link => link.addEventListener(("click"), ()=> {
+    document.body.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
+}))
 
