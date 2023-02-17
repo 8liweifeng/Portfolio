@@ -36,7 +36,7 @@ function stickyNavbar() {
 stickyNavbar();
 window.addEventListener("scroll",stickyNavbar);
 
-/* --------- Reveal Animation --------- */ // I do not know why it can not work
+
 let sr = ScrollReveal({
     duration: 2500,
     distance: "60px",
